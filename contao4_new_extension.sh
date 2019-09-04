@@ -71,18 +71,18 @@ else
 	sed -i "s/ContaoSkeletonBundle/""$cammel_case""Bundle/gm" src/"$cammel_case"Bundle.php
 	echo "Updated and renamed src/ContaoSkeletonBundle.php."
 
-	sed -i "s/SkeletonBundle/""$cammel_case""Bundle;/gm" src/ContaoManager/Plugin.php
-	sed -i "s/ContaoSkeletonBundle/""$cammel_case""Bundle;/gm" src/ContaoManager/Plugin.php
+	sed -i "s/Contao\\\\SkeletonBundle/""$vendor""\\\\""$cammel_case""Bundle/gm" src/ContaoManager/Plugin.php
+	sed -i "s/ContaoSkeletonBundle/""$cammel_case""Bundle/gm" src/ContaoManager/Plugin.php
 	echo "Updated src/ContaoManager/Plugin.php"
 
 	mv src/DependencyInjection/ContaoSkeletonExtension.php src/DependencyInjection/"$cammel_case"Extension.php
 	sed -i "s/ContaoSkeletonExtension/""$cammel_case""Extension/gm" src/DependencyInjection/"$cammel_case"Extension.php
-	sed -i "s/SkeletonBundle/""$cammel_case""Bundle/gm" src/DependencyInjection/"$cammel_case"Extension.php
+	sed -i "s/Contao\\\\SkeletonBundle/""$vendor""\\\\""$cammel_case""Bundle/gm" src/DependencyInjection/"$cammel_case"Extension.php
 	echo "Updated and renamed src/DependencyInjection/ContaoSkeletonExtension.php."
 
 	mv tests/ContaoSkeletonBundleTest.php tests/"$cammel_case"BundleTest.php
 	sed -i "s/ContaoSkeletonBundle/""$cammel_case""Bundle/gm" tests/"$cammel_case"BundleTest.php
-	sed -i "s/SkeletonBundle/""$cammel_case""Bundle/gm" tests/"$cammel_case"BundleTest.php
+	sed -i "s/Contao\\\\SkeletonBundle/""$vendor""\\\\""$cammel_case""Bundle/gm" tests/"$cammel_case"BundleTest.php
 	echo "Updated and renamed tests/ContaoSkeletonBundleTest.php."
 	
 	#For usage of JetBrain IDEs
