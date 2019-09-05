@@ -57,7 +57,7 @@ else
 	sed -i "s/^\s*\"homepage\": \"https:\/\/github\.com\/leofeyer\"\s*$/            \"homepage\": \"https:\/\/github.com\/""$vendor""\"/gm" composer.json
 	sed -i "s/^\s*\"contao\/core-bundle\": \"4\.4\.\*\",\s*$/        \"contao\/core-bundle\": \"~4.4\",/gm" composer.json
 	sed -i "s/^\s*\"contao-manager-plugin\": \"Contao\\\\\\\\SkeletonBundle\\\\\\\\ContaoManager\\\\\\\\Plugin\"\s*$/        \"contao-manager-plugin\": \"""$vendor""\\\\\\\\""$cammel_case""Bundle\\\\\\\\ContaoManager\\\\\\\\Plugin\"/gm" composer.json
-	sed -i "s/^\s*\"Contao\\\\\\\\SkeletonBundle\\\\\\\\\": \"src\/\"\s*$/            \"Contao\\\\\\\\""$cammel_case""Bundle\\\\\\\\\": \"src\/\"/gm" composer.json
+	sed -i "s/^\s*\"Contao\\\\\\\\SkeletonBundle\\\\\\\\\": \"src\/\"\s*$/            \"""$vendor""\\\\\\\\""$cammel_case""Bundle\\\\\\\\\": \"src\/\"/gm" composer.json
 	sed -i "s/^\s*\"Contao\\\\\\\\SkeletonBundle\\\\\\\\Tests\\\\\\\\\": \"tests\/\"\s*$/            \"Contao\\\\\\\\""$cammel_case""Bundle\\\\\\\\Tests\\\\\\\\\": \"tests\/\"/gm" composer.json
 	sed -i "s/^\s*\"issues\": \"https:\/\/github\.com\/contao\/skeleton-bundle\/issues\",\s*$/        \"issues\": \"https:\/\/github\.com\/""$vendor""\/""$bundle_name""\/issues\",/gm" composer.json
 	sed -i "s/^\s*\"source\": \"https:\/\/github\.com\/contao\/skeleton-bundle\"\s*$/        \"source\": \"https:\/\/github\.com\/""$vendor""\/""$bundle_name""\"/gm" composer.json
